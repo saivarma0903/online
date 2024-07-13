@@ -2,3 +2,36 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import url(assets/theme/blue.scss);
+
+
+.default-input-width{
+    min-width:100px !important;
+    width: 100%;
+}
+
+.d-flex{
+    display: flex;
+}
+.d-grid{
+    display: grid;
+}
+
+.justify-content-space-btw{
+    justify-content: space-between;
+}
+.justify-content-space-cntr{
+    justify-content: center;
+}
+.align-items-cntr{
+    align-items: center;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}

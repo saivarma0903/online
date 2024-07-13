@@ -1,0 +1,16 @@
+<div *ngIf="type === 'text'">
+    <mat-form-field class="default-input-width" appearance="outline">
+      <mat-label>{{label}}</mat-label>
+      <input type="text"  matInput [formControl]="control" 
+             [placeholder]=placeholder [name]="label" ngDefaultControl>
+    </mat-form-field>
+</div>
+<div *ngIf="type === 'password'">
+    <mat-form-field class="default-input-width" appearance="outline" >
+      <mat-label>{{label}}</mat-label>
+      <input type="password"  matInput [formControl]="control" 
+             [placeholder]=placeholder [name]="label" ngDefaultControl>
+    </mat-form-field>
+</div>
+
+  

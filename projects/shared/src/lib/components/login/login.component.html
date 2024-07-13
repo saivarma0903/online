@@ -1,0 +1,37 @@
+<div class="body-container">
+    <div class="header">
+        <img src="assets/icons/logo/main-logo.png" alt="Logo">
+        <lib-text text="School" class="font-16 font-bold color-white"></lib-text>
+        
+    </div>
+    <div class="main-container">
+        <div class="container">
+            <lib-text [text]="actionLabel" class="font-16 font-bold"></lib-text>
+            <form [formGroup]="loginForm" *ngIf="loginType === 'login'">
+                <lib-input-fields [control]="loginForm.get('email')" label="Email" type="text"></lib-input-fields>
+                <lib-input-fields [control]="loginForm.get('password')" label="Password"
+                    type="password"></lib-input-fields>
+                    <div class="d-grid justify-content-space-cntr gap-10" >
+                        <button mat-raised-button color="primary" (click)="login()">Login</button>
+                        <lib-text text="Sign Up" class="font-12 cursor-pointer" (click)="register()"></lib-text>
+                    </div>
+            </form>
+            <form [formGroup]="registerForm" *ngIf="loginType === 'register'">
+                <lib-input-fields [control]="registerForm.get('name')" label="Name" type="text"></lib-input-fields>
+                <lib-input-fields [control]="registerForm.get('email')" label="Email" type="text"></lib-input-fields>
+                <lib-input-fields [control]="registerForm.get('password')" label="Password"
+                    type="password"></lib-input-fields>
+                <lib-input-fields [control]="registerForm.get('reenterPassword')" label="Re-enter Password"
+                    type="password"></lib-input-fields>
+                    <div class="d-grid justify-content-space-cntr gap-10" >
+                        <button mat-raised-button color="primary" (click)="signUp()">Sign Up</button>
+                        <lib-text text="Back To Login" class="font-12 cursor-pointer" (click)="backLogin()"></lib-text>
+                    </div>
+
+            </form>
+           
+          
+
+        </div>
+    </div>
+</div>

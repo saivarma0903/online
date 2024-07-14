@@ -1,0 +1,29 @@
+.layout-sidebar{
+    width: 60px;
+    background-color:var(--theme-header-bg);
+    transition: width 0.5s;
+}
+.main-container{
+    height: calc(100dvh - 60px);
+}
+header, .footer-content{
+    height: 60px;
+    align-items: center;
+    display: flex;
+    background-color:var(--theme-header-bg);
+}
+
+.sidebar-content{
+
+    border: 1px solid var(--theme-color-border);
+    border-radius: 16px;
+    margin: 16px;
+    padding: 16px;
+    
+}
+
+
+.layout-sidebar:hover {
+    width: 120px;
+  }
+

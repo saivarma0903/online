@@ -32,6 +32,7 @@ ngOnInit(): void {
 }
 
 login(){
+  if(!this.loginForm.valid) return;
   let submitFormValue = this.loginForm.value
   let reqData = {
     "name":"",
@@ -59,6 +60,7 @@ this.registerForm.reset()
 }
 
 signUp(){
+  if(!this.registerForm.valid) return;
   let submitFormValue = this.registerForm.value
   let reqData = {
     "name":submitFormValue.name,

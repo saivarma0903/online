@@ -1,0 +1,9 @@
+<div class="header">
+    <div class="side-menu" *ngIf="router.url !== '/login'">
+        <mat-icon fontIcon="menu" *ngIf="!menuOpen" (click)="menuOpen = true;sliderInfo.emit('open')"></mat-icon>
+        <mat-icon fontIcon="close" *ngIf="menuOpen" (click)="menuOpen = false;sliderInfo.emit('close')"></mat-icon>
+    </div>
+    <div [ngClass]="router.url === '/login' ? 'logo-before-container':'logo-after-container'">
+    <img src="assets/icons/logo/main-logo.png" alt="Logo">
+    <lib-text text="SCHOOL" class="font-bold color-white"></lib-text></div>
+</div>

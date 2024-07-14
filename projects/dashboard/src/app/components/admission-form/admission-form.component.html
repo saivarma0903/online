@@ -1,0 +1,28 @@
+<div class="side-layout">
+    <div class="left-side-layout">
+        <div>
+            <form [formGroup]="administration">
+                <lib-input-fields [control]="administration.get('name')" label="Name" type="text"></lib-input-fields>
+                <lib-input-fields [control]="administration.get('fatherName')" label="Father Name"
+                    type="text"></lib-input-fields>
+                <lib-input-fields [control]="administration.get('motherName')" label="Mother Name"
+                    type="text"></lib-input-fields>
+                <lib-input-fields [control]="administration.get('dateOfBirth')" label="Date Of Birth"
+                    type="datePicker"></lib-input-fields>
+                <lib-input-fields [control]="administration.get('gender')" optionValue="CODE"
+                    optionDisplay="DESCRIPTION" label="Gender" type="dropDown"
+                    [options]="genderInfo"></lib-input-fields>
+                <lib-input-fields [control]="administration.get('grade')" optionValue="CODE" optionDisplay="DESCRIPTION"
+                    label="Grade" type="dropDown" [options]="gradeInfo"></lib-input-fields>
+                    <div class="button-container">
+                        <button mat-stroked-button type="reset" color="warn">Reset</button>
+                        <button mat-flat-button type="submit" color="primary">Submit</button>
+                    </div>
+            </form>
+        </div>
+        <lib-separator></lib-separator>
+    </div>
+    <div>
+        testing
+    </div>
+</div>

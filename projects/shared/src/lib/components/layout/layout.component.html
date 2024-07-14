@@ -1,0 +1,11 @@
+<lib-header (sliderInfo)="drawer.toggle()"></lib-header>
+<div><mat-drawer-container class="main-container" autosize>
+        <mat-drawer #drawer class="layout-sidebar" mode="side">
+        </mat-drawer>
+        <div class="sidebar-content">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <footer class="footer-content">
+            Footer Works!
+        </footer> -->
+    </mat-drawer-container></div>

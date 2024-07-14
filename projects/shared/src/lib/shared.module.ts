@@ -2,13 +2,16 @@ import { NgModule } from '@angular/core';
 import { SharedComponent } from './shared.component';
 import { LoginComponent } from './components/login/login.component';
 import { CommonModule } from './components/common/common.module';
+import { LayoutComponent } from './components/layout/layout.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
 @NgModule({
   declarations: [
     SharedComponent,
-    LoginComponent
+    LoginComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +19,8 @@ import { CommonModule } from './components/common/common.module';
   exports: [
     SharedComponent,
     LoginComponent,
-    CommonModule
-  ]
+    CommonModule,
+    LayoutComponent
+  ],
 })
 export class SharedModule { }

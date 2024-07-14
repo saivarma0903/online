@@ -5,6 +5,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import url(assets/theme/blue.scss);
 
+.mat-drawer-content{
+    overflow: hidden !important;
+}
+
 
 .default-input-width{
     min-width:100px !important;
@@ -35,3 +39,59 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .cursor-pointer{
     cursor: pointer;
 }
+
+.side-layout{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    gap:8px;
+
+}
+
+.side-layout > :first-child {
+    flex: 0 0 65%; 
+    max-width: 65%;
+    min-width: 65%;
+    height: calc(100dvh - 120px);
+
+  }
+
+  .left-side-layout{
+    display: flex;
+  }
+
+  .left-side-layout > :first-child {
+padding: 0px 16px 0px 0px;
+    flex: 0 0 calc(100% - 18px);
+    max-width: calc(100% - 18px);
+    min-width: calc(100% - 18px);
+    overflow-y: auto;
+  }
+
+
+  /* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--theme-color-border); 
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color-border); 
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+  }

@@ -12,5 +12,21 @@
              [placeholder]=placeholder [name]="label" ngDefaultControl>
     </mat-form-field>
 </div>
+<div *ngIf="type === 'dropDown'">
+  <mat-form-field class="default-input-width" appearance="outline">
+      <mat-label>{{label}}</mat-label>
+      <mat-select  [formControl]="control">
+        <mat-option *ngFor="let option of options" [value]=option[optionValue]>{{option[optionDisplay]}}</mat-option>
+      </mat-select>
+  </mat-form-field>
+</div>
+<div *ngIf="type === 'datePicker'">
+  <mat-form-field class="default-input-width" appearance="outline">
+    <mat-label>{{label}}</mat-label>
+    <input matInput [matDatepicker]="picker" [formControl]="control">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
 
   

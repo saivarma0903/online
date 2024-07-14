@@ -5,16 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from 'projects/shared/src/lib/components/common/common.module';
+import { AdmissionFormComponent } from './components/admission-form/admission-form.component';
+import { SharedModule } from 'projects/shared/src/public-api';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdmissionFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    CommonModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,10 @@ import { FormControl } from '@angular/forms';
 })
 export class InputFieldsComponent {
 @Input() control:FormControl | any;
-@Input() placeholder = ''
-@Input() label = ''
-@Input() type = ''
+@Input() placeholder = '';
+@Input() label = '';
+@Input() type = '';
+@Input() options =[];
+@Input() optionValue ='';
+@Input() optionDisplay ='';
 }
